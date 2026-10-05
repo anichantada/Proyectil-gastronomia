@@ -1,66 +1,88 @@
 {{ define "main" }}
 {{ $p := .Params }}
+{{ $zig := `<svg class="zig" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="2,46 22,4 30,40 98,6 90,44"/></svg>` }}
+{{ $zag := `<svg class="zig" viewBox="0 0 140 50" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="2,20 48,6 70,30 84,6 88,46 138,26"/></svg>` }}
 
 <section id="inicio" class="hero">
   <div class="wrap">
-    <h1>{{ $p.titulo }}</h1>
-    <p class="hero__lead">{{ $p.bajada }}</p>
-    <a class="btn" href="#contacto">{{ $p.boton }}</a>
+    <p class="justify hero__top">{{ upper $p.bajada }}. Consultoría y capacitación.</p>
+
+    <div class="lockup">
+      <div class="lockup__mark"><span class="pmark"></span></div>
+      <div class="lockup__text">
+        {{ range split (upper $p.titulo) " " }}<span>{{ . }}</span>{{ end }}
+      </div>
+    </div>
+
+    <div class="hero__bottom">
+      <a class="btn" href="#contacto">{{ $p.boton }}</a>
+      <span class="mono">Bs As, Argentina</span>
+    </div>
   </div>
 </section>
 
-<section id="metodo" class="section">
+<section id="metodo" class="band band--gris">
   <div class="wrap">
-    <h2>{{ $p.metodo.titulo }}</h2>
-    <p class="section__text">{{ $p.metodo.texto }}</p>
+    <h2 class="justify">{{ $p.metodo.titulo | upper | replaceRE " " (printf " %s " $zig) | safeHTML }}</h2>
+    <p class="mono label">¿Cómo trabajamos?</p>
+    <p class="lead">{{ $p.metodo.texto }}</p>
     <ol class="steps">
-      {{ range $p.metodo.pasos }}
+      {{ range $i, $s := $p.metodo.pasos }}
       <li class="step">
-        <h3>{{ .nombre }}</h3>
-        <p>{{ .texto }}</p>
+        <span class="mono step__num">0{{ add $i 1 }}</span>
+        <h3>{{ upper $s.nombre }}</h3>
+        <p>{{ $s.texto }}</p>
       </li>
       {{ end }}
     </ol>
   </div>
 </section>
 
-<section id="servicios" class="section section--alt">
+<section id="servicios" class="band">
   <div class="wrap">
-    <h2>{{ $p.servicios.titulo }}</h2>
-    <p class="section__sub">{{ $p.servicios.bajada }}</p>
-    <ul class="cards">
+    <p class="mono label">¿Qué ofrecemos?</p>
+    <h2 class="justify">{{ upper $p.servicios.titulo }}</h2>
+    <ul class="pills">
       {{ range $p.servicios.lista }}
-      <li class="card">
-        <h3>{{ .nombre }}</h3>
-        {{ with .texto }}<p>{{ . }}</p>{{ end }}
+      <li class="pill">
+        <h3>{{ upper .nombre }}</h3>
+        {{ with .texto }}<p class="mono">{{ . }}</p>{{ end }}
       </li>
-      {{ end }}
-    </ul>
-
-    <h2 class="mt">{{ $p.capacitaciones.titulo }}</h2>
-    <p class="section__sub">{{ $p.capacitaciones.bajada }}</p>
-    <ul class="cards cards--small">
-      {{ range $p.capacitaciones.lista }}
-      <li class="card"><h3>{{ .nombre }}</h3></li>
       {{ end }}
     </ul>
   </div>
 </section>
 
-<section id="contacto" class="section">
-  <div class="wrap contact">
-    <h2>{{ $p.contacto.titulo }}</h2>
-    <p class="section__text">{{ $p.contacto.texto }}</p>
+<section class="band band--oscuro">
+  <div class="wrap">
+    <p class="mono label">{{ $p.capacitaciones.bajada }}</p>
+    <h2 class="justify">{{ $p.capacitaciones.titulo | upper }} {{ $zag | safeHTML }}</h2>
+    <ul class="pills">
+      {{ range $p.capacitaciones.lista }}
+      <li class="pill"><h3>{{ upper .nombre }}</h3></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section id="contacto" class="band band--amarillo">
+  <div class="wrap">
+    <p class="mono label">¿Cómo contactarnos?</p>
+    <h2 class="contact__big">{{ upper $p.contacto.texto }}</h2>
     {{ $s := site.Params }}
     {{ if or $s.whatsapp $s.email $s.instagram }}
     <div class="contact__links">
       {{ with $s.whatsapp }}<a class="btn" href="https://wa.me/{{ . }}" target="_blank" rel="noopener">WhatsApp</a>{{ end }}
-      {{ with $s.email }}<a class="btn btn--ghost" href="mailto:{{ . }}">Email</a>{{ end }}
-      {{ with $s.instagram }}<a class="btn btn--ghost" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+      {{ with $s.email }}<a class="btn btn--line" href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ with $s.instagram }}<a class="btn btn--line" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
     </div>
     {{ else }}
-    <p class="contact__pending">{{ $p.contacto.pendiente }}</p>
+    <p class="mono pending">{{ $p.contacto.pendiente }}</p>
     {{ end }}
+    <div class="lockup lockup--small">
+      <div class="lockup__mark"><span class="pmark"></span></div>
+      <div class="lockup__text"><span>PROYECTIL</span><span>ASESORÍA</span><span>GASTRONÓMICA</span></div>
+    </div>
   </div>
 </section>
 {{ end }}
