@@ -26,7 +26,6 @@ metodo:
 servicios:
   titulo: "Servicios de consultoría"
   etiqueta: "¿Qué ofrecemos?"
-  bajada: "Para negocios gastronómicos"
   lista:
     - nombre: "Apertura integral"
       texto: "Acompañamiento completo para abrir tu negocio gastronómico."
