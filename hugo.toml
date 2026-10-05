@@ -11,4 +11,4 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   # Mientras estén vacíos, la sección Contacto muestra "Próximamente".
   whatsapp = ""   # solo números con código de país, ej: "5491112345678"
   email = ""      # ej: "hola@proyectil.com.ar"
-  instagram = ""  # usuario sin @, ej: "proyectilgastronomia"
+  instagram = "proyectil.ba"  # usuario sin @, ej: "proyectilgastronomia"
