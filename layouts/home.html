@@ -5,7 +5,7 @@
 
 <section id="inicio" class="hero">
   <div class="wrap">
-    <p class="justify hero__top">{{ upper $p.bajada }}. Consultoría y capacitación.</p>
+    <p class="justify hero__top">{{ $p.bajada }}.{{ with $p.frase }} {{ . }}.{{ end }}</p>
 
     <div class="lockup">
       <div class="lockup__mark"><span class="pmark"></span></div>
@@ -16,7 +16,7 @@
 
     <div class="hero__bottom">
       <a class="btn" href="#contacto">{{ $p.boton }}</a>
-      <span class="mono">Bs As, Argentina</span>
+      {{ with $p.ubicacion }}<span class="mono">{{ . }}</span>{{ end }}
     </div>
   </div>
 </section>
@@ -24,7 +24,7 @@
 <section id="metodo" class="band band--gris">
   <div class="wrap">
     <h2 class="justify">{{ $p.metodo.titulo | upper | replaceRE " " (printf " %s " $zig) | safeHTML }}</h2>
-    <p class="mono label">¿Cómo trabajamos?</p>
+    {{ with $p.metodo.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <p class="lead">{{ $p.metodo.texto }}</p>
     <ol class="steps">
       {{ range $i, $s := $p.metodo.pasos }}
@@ -40,8 +40,9 @@
 
 <section id="servicios" class="band">
   <div class="wrap">
-    <p class="mono label">¿Qué ofrecemos?</p>
+    {{ with $p.servicios.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <h2 class="justify">{{ upper $p.servicios.titulo }}</h2>
+    {{ with $p.servicios.bajada }}<p class="sub">{{ . }}</p>{{ end }}
     <ul class="pills">
       {{ range $p.servicios.lista }}
       <li class="pill">
@@ -55,8 +56,9 @@
 
 <section class="band band--oscuro">
   <div class="wrap">
-    <p class="mono label">{{ $p.capacitaciones.bajada }}</p>
+    {{ with $p.capacitaciones.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <h2 class="justify">{{ $p.capacitaciones.titulo | upper }} {{ $zag | safeHTML }}</h2>
+    {{ with $p.capacitaciones.bajada }}<p class="sub">{{ . }}</p>{{ end }}
     <ul class="pills">
       {{ range $p.capacitaciones.lista }}
       <li class="pill"><h3>{{ upper .nombre }}</h3></li>
@@ -67,7 +69,7 @@
 
 <section id="contacto" class="band band--amarillo">
   <div class="wrap">
-    <p class="mono label">¿Cómo contactarnos?</p>
+    {{ with $p.contacto.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <h2 class="contact__big">{{ upper $p.contacto.texto }}</h2>
     {{ $s := site.Params }}
     {{ if or $s.whatsapp $s.email $s.instagram }}
