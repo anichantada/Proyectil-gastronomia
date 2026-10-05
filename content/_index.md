@@ -5,7 +5,7 @@
 # ==========================================================
 
 titulo: "Proyectil gastronomía"
-bajada: "Estudio de asesores gastronómicos"
+bajada: "Somos un estudio de asesores gastronómicos especializados en operaciones, innovación y calidad"
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
