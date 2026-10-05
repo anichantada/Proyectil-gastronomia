@@ -6,7 +6,7 @@
 
 titulo: "Proyectil gastronomía"
 bajada: "Estudio de asesores gastronómicos"
-boton: "Hablemos de tu negocio"
+boton: "Contactanos"
 
 metodo:
   titulo: "Nuestro método"
@@ -16,7 +16,9 @@ metodo:
       texto: "Recolectamos la información clave de tu negocio."
     - nombre: "Indicadores"
       texto: "Definimos KPI específicos para medir el éxito."
-    - nombre: "Auditoría"
+    - nombre: "Implementación"
+      texto: "Llevamos a cabo el servicio." 
+    - nombre: "Evaluación"
       texto: "Verificamos los resultados con auditorías."
 
 servicios:
