@@ -10,5 +10,8 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   # Canales de contacto: completalos cuando estén activos.
   # Mientras estén vacíos, la sección Contacto muestra "Próximamente".
   whatsapp = ""   # solo números con código de país, ej: "5491112345678"
-  email = ""      # ej: "hola@proyectil.com.ar"
+  email = "proyectil.contacto@gmail.com"      # ej: "hola@proyectil.com.ar"
   instagram = "proyectil.ba"  # usuario sin @, ej: "proyectilgastronomia"
+  # Email que recibe los mensajes del formulario de contacto.
+  # Mientras esté vacío, el formulario no se muestra.
+  formulario = "proyectil.contacto@gmail.com"
