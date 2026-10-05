@@ -7,6 +7,9 @@
   <meta name="description" content="{{ site.Params.description }}">
   <meta property="og:title" content="{{ site.Title }}">
   <meta property="og:description" content="{{ site.Params.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
   {{ with resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
@@ -17,7 +20,11 @@
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="footer">
-    <div class="wrap">© {{ now.Year }} {{ site.Title }}</div>
+    <div class="wrap footer__row mono">
+      <span>{{ with site.Params.instagram }}@{{ . }}{{ else }}© {{ now.Year }} Proyectil{{ end }}</span>
+      {{ with site.Params.email }}<span>{{ . }}</span>{{ end }}
+      <span>Bs As, Argentina</span>
+    </div>
   </footer>
 </body>
 </html>
