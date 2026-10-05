@@ -72,15 +72,54 @@
     {{ with $p.contacto.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <h2 class="contact__big">{{ upper $p.contacto.texto }}</h2>
     {{ $s := site.Params }}
+    {{ $f := $p.contacto.formulario }}
+
+    {{ with $s.formulario }}
+    <form class="form" id="form-contacto" action="https://formsubmit.co/{{ . }}" method="POST">
+      <input type="hidden" name="_subject" value="Nueva consulta desde la web">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="{{ $.Permalink }}?enviado=1#contacto">
+      <input type="text" name="_honey" class="form__trampa" tabindex="-1" autocomplete="off">
+
+      <label class="form__campo">
+        <span class="mono">{{ $f.nombre | default "Nombre y apellido" }}</span>
+        <input type="text" name="Nombre y apellido" autocomplete="name" required>
+      </label>
+      <label class="form__campo">
+        <span class="mono">{{ $f.email | default "Mail" }}</span>
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label class="form__campo">
+        <span class="mono">{{ $f.telefono | default "Teléfono" }}</span>
+        <input type="tel" name="Teléfono" autocomplete="tel">
+      </label>
+      <label class="form__campo form__campo--ancho">
+        <span class="mono">{{ $f.mensaje | default "Contanos sobre tu proyecto" }}</span>
+        <textarea name="Proyecto" rows="5" required></textarea>
+      </label>
+      <div class="form__campo--ancho">
+        <button type="submit" class="btn">{{ $f.boton | default "Enviar" }}</button>
+      </div>
+    </form>
+    <p class="form__gracias contact__big" id="form-gracias" hidden>{{ $f.gracias | default "¡Gracias! Te respondemos a la brevedad." }}</p>
+    <script>
+      if (new URLSearchParams(location.search).has("enviado")) {
+        document.getElementById("form-contacto").hidden = true;
+        document.getElementById("form-gracias").hidden = false;
+      }
+    </script>
+    {{ end }}
+
     {{ if or $s.whatsapp $s.email $s.instagram }}
     <div class="contact__links">
       {{ with $s.whatsapp }}<a class="btn" href="https://wa.me/{{ . }}" target="_blank" rel="noopener">WhatsApp</a>{{ end }}
       {{ with $s.email }}<a class="btn btn--line" href="mailto:{{ . }}">Email</a>{{ end }}
       {{ with $s.instagram }}<a class="btn btn--line" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
     </div>
-    {{ else }}
+    {{ else if not $s.formulario }}
     <p class="mono pending">{{ $p.contacto.pendiente }}</p>
     {{ end }}
+
     <div class="lockup lockup--small">
       <div class="lockup__mark"><span class="pmark"></span></div>
       <div class="lockup__text"><span>PROYECTIL</span><span>ASESORÍA</span><span>GASTRONÓMICA</span></div>
