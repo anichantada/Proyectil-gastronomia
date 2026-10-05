@@ -10,9 +10,9 @@ boton: "Contactanos"
 frase: "Consultoría y capacitación"
 ubicacion: "Bs As, Argentina"
 
-  metodo:
+metodo:
   titulo: "Nuestro método"
-    etiqueta: "¿Cómo trabajamos?"
+  etiqueta: "¿Cómo trabajamos?"
   texto: "Nos encargamos de desarrollar un método de trabajo que garantice el efecto de nuestros servicios de asesoría de manera medible, a través de relevamiento de información clave y el uso de indicadores de éxito KPI específicos que se verifican a través de auditorías."
   pasos:
     - nombre: "Relevamiento"
@@ -20,13 +20,13 @@ ubicacion: "Bs As, Argentina"
     - nombre: "Indicadores"
       texto: "Definimos KPI específicos para medir el éxito."
     - nombre: "Implementación"
-      texto: "Llevamos a cabo el servicio." 
+      texto: "Llevamos a cabo el servicio."
     - nombre: "Evaluación"
       texto: "Verificamos los resultados con auditorías."
 
 servicios:
   titulo: "Servicios de consultoría"
-    etiqueta: "¿Qué ofrecemos?"
+  etiqueta: "¿Qué ofrecemos?"
   bajada: "Para negocios gastronómicos"
   lista:
     - nombre: "Apertura integral"
@@ -52,7 +52,7 @@ capacitaciones:
 
 contacto:
   titulo: "Contacto"
-    etiqueta: "¿Cómo contactarnos?"
+  etiqueta: "¿Cómo contactarnos?"
   texto: "Contanos sobre tu proyecto y armamos una propuesta a medida."
   pendiente: "Próximamente vas a poder escribirnos por WhatsApp, email e Instagram."
 ---
