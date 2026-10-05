@@ -7,7 +7,6 @@
 titulo: "Proyectil gastronomía"
 bajada: "Estudio de asesores gastronómicos"
 boton: "Contactanos"
-frase: "Consultoría y capacitación"
 ubicacion: "Bs As, Argentina"
 
 metodo:
