@@ -23,8 +23,7 @@
     <div class="wrap footer__row mono">
       <span>{{ with site.Params.instagram }}@{{ . }}{{ else }}© {{ now.Year }} Proyectil{{ end }}</span>
       {{ with site.Params.email }}<span>{{ . }}</span>{{ end }}
-      <span>Bs As, Argentina</span>
-    </div>
+      {{ with site.Home.Params.ubicacion }}<span>{{ . }}</span>{{ end }}    </div>
   </footer>
 </body>
 </html>
