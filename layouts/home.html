@@ -110,15 +110,12 @@
     </script>
     {{ end }}
 
-    {{ if or $s.whatsapp $s.email $s.instagram }}
-    <div class="contact__links">
-      {{ with $s.whatsapp }}<a class="btn" href="https://wa.me/{{ . }}" target="_blank" rel="noopener">WhatsApp</a>{{ end }}
-      {{ with $s.email }}<a class="btn btn--line" href="mailto:{{ . }}">Email</a>{{ end }}
-      {{ with $s.instagram }}<a class="btn btn--line" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+       <div class="contact__links">
+      <a class="btn btn--line btn--icono" href="{{ with $s.whatsapp }}https://wa.me/{{ . }}{{ else }}#contacto{{ end }}" {{ if $s.whatsapp }}target="_blank" rel="noopener"{{ end }} aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      {{ with $s.email }}<a class="btn btn--line btn--icono" href="mailto:{{ . }}" aria-label="Email" title="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>{{ end }}
+      {{ with $s.instagram }}<a class="btn btn--line btn--icono" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>{{ end }}
+      <a class="btn btn--line btn--icono" href="{{ with $s.linkedin }}{{ . }}{{ else }}#contacto{{ end }}" {{ if $s.linkedin }}target="_blank" rel="noopener"{{ end }} aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
     </div>
-    {{ else if not $s.formulario }}
-    <p class="mono pending">{{ $p.contacto.pendiente }}</p>
-    {{ end }}
 
     <div class="lockup lockup--small">
       <div class="lockup__mark"><span class="pmark"></span></div>
