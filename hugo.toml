@@ -1,0 +1,14 @@
+baseURL = "https://example.org/"
+locale = "es-AR"
+defaultContentLanguage = "es"
+title = "Proyectil gastronomía"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  description = "Estudio de asesores gastronómicos. Consultoría para negocios gastronómicos con resultados medibles."
+
+  # Canales de contacto: completalos cuando estén activos.
+  # Mientras estén vacíos, la sección Contacto muestra "Próximamente".
+  whatsapp = ""   # solo números con código de país, ej: "5491112345678"
+  email = ""      # ej: "hola@proyectil.com.ar"
+  instagram = ""  # usuario sin @, ej: "proyectilgastronomia"

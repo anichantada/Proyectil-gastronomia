@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{ $p := .Params }}
+
+<section id="inicio" class="hero">
+  <div class="wrap">
+    <h1>{{ $p.titulo }}</h1>
+    <p class="hero__lead">{{ $p.bajada }}</p>
+    <a class="btn" href="#contacto">{{ $p.boton }}</a>
+  </div>
+</section>
+
+<section id="metodo" class="section">
+  <div class="wrap">
+    <h2>{{ $p.metodo.titulo }}</h2>
+    <p class="section__text">{{ $p.metodo.texto }}</p>
+    <ol class="steps">
+      {{ range $p.metodo.pasos }}
+      <li class="step">
+        <h3>{{ .nombre }}</h3>
+        <p>{{ .texto }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+
+<section id="servicios" class="section section--alt">
+  <div class="wrap">
+    <h2>{{ $p.servicios.titulo }}</h2>
+    <p class="section__sub">{{ $p.servicios.bajada }}</p>
+    <ul class="cards">
+      {{ range $p.servicios.lista }}
+      <li class="card">
+        <h3>{{ .nombre }}</h3>
+        {{ with .texto }}<p>{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+
+    <h2 class="mt">{{ $p.capacitaciones.titulo }}</h2>
+    <p class="section__sub">{{ $p.capacitaciones.bajada }}</p>
+    <ul class="cards cards--small">
+      {{ range $p.capacitaciones.lista }}
+      <li class="card"><h3>{{ .nombre }}</h3></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section id="contacto" class="section">
+  <div class="wrap contact">
+    <h2>{{ $p.contacto.titulo }}</h2>
+    <p class="section__text">{{ $p.contacto.texto }}</p>
+    {{ $s := site.Params }}
+    {{ if or $s.whatsapp $s.email $s.instagram }}
+    <div class="contact__links">
+      {{ with $s.whatsapp }}<a class="btn" href="https://wa.me/{{ . }}" target="_blank" rel="noopener">WhatsApp</a>{{ end }}
+      {{ with $s.email }}<a class="btn btn--ghost" href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ with $s.instagram }}<a class="btn btn--ghost" href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+    </div>
+    {{ else }}
+    <p class="contact__pending">{{ $p.contacto.pendiente }}</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

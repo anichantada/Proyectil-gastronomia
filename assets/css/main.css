@@ -1,0 +1,119 @@
+/* ==========================================================
+   COLORES Y TIPOGRAFÍA DE MARCA
+   Cuando la diseñadora entregue la identidad, se cambian acá.
+   ========================================================== */
+:root {
+  --color-fondo: #faf8f5;
+  --color-fondo-alt: #f0ece6;
+  --color-texto: #1f1d1a;
+  --color-texto-suave: #5c5750;
+  --color-acento: #c2410c;       /* color principal / botones */
+  --color-acento-texto: #ffffff;
+  --color-borde: #e2ddd5;
+
+  --fuente-titulos: Georgia, "Times New Roman", serif;
+  --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --ancho: 1080px;
+  --radio: 10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 17px;
+  line-height: 1.6;
+}
+h1, h2, h3 { font-family: var(--fuente-titulos); line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+h3 { font-size: 1.15rem; }
+p { margin: 0 0 1em; }
+a { color: inherit; }
+
+.wrap { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.header {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--color-fondo) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-borde);
+}
+.header__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.logo { font-family: var(--fuente-titulos); font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+.nav { display: flex; gap: 20px; align-items: center; font-size: .95rem; }
+.nav a { text-decoration: none; color: var(--color-texto-suave); }
+.nav a:hover { color: var(--color-texto); }
+.nav .nav__cta { color: var(--color-acento); font-weight: 600; }
+@media (max-width: 560px) {
+  .nav a:not(.nav__cta) { display: none; }
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background: var(--color-acento);
+  color: var(--color-acento-texto);
+  padding: 14px 26px;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--color-acento);
+  transition: opacity .15s;
+}
+.btn:hover { opacity: .88; }
+.btn--ghost { background: transparent; color: var(--color-acento); }
+
+/* Hero */
+.hero { padding: 120px 0 100px; }
+.hero__lead { font-size: clamp(1.15rem, 2.5vw, 1.45rem); color: var(--color-texto-suave); margin-bottom: 2em; }
+
+/* Secciones */
+.section { padding: 88px 0; }
+.section--alt { background: var(--color-fondo-alt); }
+.section__text { max-width: 680px; font-size: 1.1rem; }
+.section__sub { color: var(--color-texto-suave); margin-top: -.3em; margin-bottom: 2em; }
+.mt { margin-top: 72px; }
+
+/* Método: pasos */
+.steps {
+  list-style: none; padding: 0; margin: 48px 0 0;
+  display: grid; gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  counter-reset: paso;
+}
+.step { counter-increment: paso; border-top: 2px solid var(--color-acento); padding-top: 16px; }
+.step::before {
+  content: "0" counter(paso);
+  display: block; font-weight: 700; color: var(--color-acento); margin-bottom: 6px;
+}
+.step p { color: var(--color-texto-suave); margin: 0; }
+
+/* Tarjetas */
+.cards {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.card {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 24px;
+}
+.card p { color: var(--color-texto-suave); margin: 0; font-size: .97rem; }
+.cards--small .card h3 { margin: 0; font-size: 1.05rem; }
+
+/* Contacto */
+.contact { text-align: center; }
+.contact .section__text { margin: 0 auto 2em; }
+.contact__links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.contact__pending { color: var(--color-texto-suave); font-style: italic; }
+
+/* Footer */
+.footer { border-top: 1px solid var(--color-borde); padding: 28px 0; font-size: .9rem; color: var(--color-texto-suave); }
