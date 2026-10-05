@@ -160,3 +160,25 @@ a { color: inherit; }
 
 /* Bajadas debajo de los títulos */
 .sub { margin-top: 10px; font-size: clamp(1rem, 1.6vw, 1.15rem); opacity: .75; }
+
+/* Formulario de contacto */
+.form {
+  margin-top: 48px; max-width: 980px;
+  display: grid; gap: 28px 40px;
+  grid-template-columns: 1fr 1fr;
+}
+.form__campo { display: flex; flex-direction: column; gap: 8px; }
+.form__campo--ancho { grid-column: 1 / -1; }
+.form input, .form textarea {
+  font: inherit; font-size: 1.1rem; color: var(--tinta);
+  background: transparent;
+  border: none; border-bottom: var(--linea) solid var(--tinta);
+  border-radius: 0; padding: 8px 0;
+}
+.form textarea { border: var(--linea) solid var(--tinta); padding: 12px; resize: vertical; }
+.form input:focus, .form textarea:focus { outline: none; border-color: var(--tinta); background: rgba(255,255,255,.35); }
+.form button { cursor: pointer; font-size: .95rem; }
+.form__trampa { position: absolute; left: -9999px; }
+.form__gracias { margin-top: 48px; }
+.form__gracias[hidden], .form[hidden] { display: none; }
+@media (max-width: 640px) { .form { grid-template-columns: 1fr; } }
