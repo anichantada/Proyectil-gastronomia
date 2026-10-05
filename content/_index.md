@@ -53,4 +53,11 @@ contacto:
   etiqueta: "¿Cómo contactarnos?"
   texto: "Contanos sobre tu proyecto y armamos una propuesta a medida."
   pendiente: "Próximamente vas a poder escribirnos por WhatsApp, email e Instagram."
+  formulario:
+    nombre: "Nombre y apellido"
+    email: "Mail"
+    telefono: "Teléfono"
+    mensaje: "Contanos sobre tu proyecto"
+    boton: "Enviar"
+    gracias: "¡Gracias! Te respondemos a la brevedad."
 ---
