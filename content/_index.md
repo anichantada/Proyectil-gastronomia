@@ -10,7 +10,7 @@ boton: "Contactanos"
 frase: "Consultoría y capacitación"
 ubicacion: "Bs As, Argentina"
 
-metodo:
+  metodo:
   titulo: "Nuestro método"
     etiqueta: "¿Cómo trabajamos?"
   texto: "Nos encargamos de desarrollar un método de trabajo que garantice el efecto de nuestros servicios de asesoría de manera medible, a través de relevamiento de información clave y el uso de indicadores de éxito KPI específicos que se verifican a través de auditorías."
