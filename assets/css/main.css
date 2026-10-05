@@ -182,3 +182,12 @@ a { color: inherit; }
 .form__gracias { margin-top: 48px; }
 .form__gracias[hidden], .form[hidden] { display: none; }
 @media (max-width: 640px) { .form { grid-template-columns: 1fr; } }
+
+/* Íconos en los botones de contacto */
+.contact__links { margin-top: 56px; }
+.contact__links .btn { display: inline-flex; align-items: center; gap: 10px; }
+.contact__links .btn i { font-size: 1.15em; width: 1.1em; text-align: center; }
+
+/* Botones solo con ícono */
+.btn--icono { padding: 12px 24px 12px 18px; font-size: 1.35rem; line-height: 1; }
+.btn--icono i { width: auto; }
