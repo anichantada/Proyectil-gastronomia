@@ -45,6 +45,8 @@ a { color: inherit; }
 @media (max-width: 640px) {
   .justify { text-align: left; text-align-last: left; }
 }
+/* Los títulos de sección no se estiran: las palabras quedan juntas */
+h2.justify { text-align: left; text-align-last: left; }
 .zig { display: inline-block; height: .95em; width: auto; vertical-align: -.1em; }
 
 /* Header */
