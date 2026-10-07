@@ -24,8 +24,8 @@
   </main>
   <footer class="footer">
     <div class="wrap footer__row mono">
-      <span>{{ with site.Params.instagram }}@{{ . }}{{ else }}© {{ now.Year }} Proyectil{{ end }}</span>
-      {{ with site.Params.email }}<span>{{ . }}</span>{{ end }}
+      <span>{{ with site.Params.instagram }}<a href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ else }}© {{ now.Year }} Proyectil{{ end }}</span>
+      {{ with site.Params.email }}<span><a href="mailto:{{ . }}">{{ . }}</a></span>{{ end }}
       {{ with site.Home.Params.ubicacion }}<span>{{ . }}</span>{{ end }}    </div>
   </footer>
 </body>
