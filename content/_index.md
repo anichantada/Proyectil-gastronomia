@@ -5,7 +5,7 @@
 # ==========================================================
 
 titulo: "Proyectil gastronomía"
-bajada: "Somos un estudio de asesores gastronómicos especializados en operaciones, innovación y calidad"
+bajada: "Somos un estudio de asesores gastronómicos especializado en operaciones, innovación y calidad"
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
@@ -20,25 +20,25 @@ metodo:
       texto: "Definimos KPI específicos para medir el éxito."
     - nombre: "Implementación"
       texto: "Ejecutamos el servicio, con acciones concretas y plazos definidos."
-    - nombre: "Evaluación"
+    - nombre: "Seguimiento"
       texto: "Verificamos los resultados con auditorías."
 
 servicios:
-  titulo: "Servicios de consultoría"
+  titulo: "Servicios de asesoría"
   etiqueta: "¿Qué ofrecemos?"
   lista:
     - nombre: "Apertura integral"
       texto: "Acompañamiento completo para abrir tu negocio gastronómico."
     - nombre: "Ingeniería de menú"
-      texto: "Recetas y costos estandarizados."
+      texto: "Comprende un análisis de coherencia y rentabilidad del menú, recetas estandarizadas y control de costos y mermas."
     - nombre: "Eficiencia de procesos y buenas prácticas"
-      texto: "Procedimientos operativos estandarizados (SOPs)."
+      texto: "Fortalece la operación diaria implementando procedimientos operativos estandarizados (SOPs)."
     - nombre: "Mejora continua"
-      texto: "Seguimiento y ajustes para sostener los resultados."
-    - nombre: "Estándares de servicio"
-      texto: "Criterios claros para la atención de tus clientes."
+      texto: "Seguimiento y ajustes para sostener la calidad."
+    - nombre: "Estándares de hospitalidad"
+      texto: "Criterios claros para mejorar la experiencia del cliente."
     - nombre: "Servicios personalizados"
-      texto: "Soluciones a medida de tu negocio."
+      texto: "Consultá por soluciones a medida de tu negocio."
 
 capacitaciones:
   titulo: "Capacitaciones"
@@ -46,12 +46,12 @@ capacitaciones:
   lista:
     - nombre: "Profesionalización de personal estratégico"
     - nombre: "Bromatología y carnet de manipulador de alimentos"
-    - nombre: "Capacitaciones técnicas personalizadas"
+    - nombre: "Capacitaciones técnicas en cocina y hospitalidad"
 
 contacto:
   titulo: "Contacto"
   etiqueta: "¿Cómo contactarnos?"
-  texto: "Contanos sobre tu proyecto y armamos una propuesta a medida."
+  texto: "Comunicate con nosotros para conocer más"
   pendiente: "Próximamente vas a poder escribirnos por WhatsApp, email e Instagram."
   formulario:
     nombre: "Nombre y apellido"
