@@ -19,7 +19,7 @@ metodo:
     - nombre: "Indicadores"
       texto: "Definimos KPI específicos para medir el éxito."
     - nombre: "Implementación"
-      texto: "Llevamos a cabo el servicio."
+      texto: "Ejecutamos el plan junto a tu equipo, con acciones concretas y plazos definidos."
     - nombre: "Evaluación"
       texto: "Verificamos los resultados con auditorías."
 
