@@ -12,7 +12,7 @@ ubicacion: "Bs As, Argentina"
 metodo:
   titulo: "Nuestro método"
   etiqueta: "¿Cómo trabajamos?"
-  texto: "Creemos en una asesoría cercana, concreta y orientada a resultados. Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicios de asesoría de manera medible, a través de relevamiento de información clave y el uso de indicadores de éxito (KPI) específicos que se verifican a través de auditorías."
+  texto: "Creemos en una asesoría cercana, concreta y orientada a resultados. Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicios de asesoría de manera medible, donde los resultados pueden verificarse con números. A través de relevamiento de información clave, el uso de indicadores de éxito (KPI) diseñados específicamente y la verificación de resultados a través de auditorías."
   pasos:
     - nombre: "Relevamiento"
       texto: "Recolectamos la información clave de tu negocio."
