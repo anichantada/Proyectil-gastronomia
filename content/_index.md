@@ -9,7 +9,7 @@ bajada: "Somos un estudio de asesores gastronómicos especializados en operacion
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
-metodo:
+método:
   titulo: "Nuestro método"
   etiqueta: "¿Cómo trabajamos?"
   texto: "Creemos en una asesoría cercana, concreta y orientada a resultados. Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicios de asesoría de manera medible, a través de relevamiento de información clave y el uso de indicadores de éxito (KPI) específicos que se verifican a través de auditorías."
