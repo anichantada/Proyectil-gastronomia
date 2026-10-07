@@ -161,6 +161,8 @@ h2.justify { text-align: left; text-align-last: left; }
 /* Footer */
 .footer { background: var(--blanco); padding: 28px 0; border-top: var(--linea) solid var(--tinta); }
 .footer__row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer a { text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
 
 /* Bajadas debajo de los títulos */
 .sub { margin-top: 10px; font-size: clamp(1rem, 1.6vw, 1.15rem); opacity: .75; }
