@@ -20,7 +20,29 @@
     </div>
   </div>
 </section>
-
+{{ with $p.nosotros }}
+<section id="nosotros" class="band">
+  <div class="wrap">
+    {{ with .etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
+    <h2 class="justify">{{ upper .titulo }}</h2>
+    {{ with .texto }}<p class="lead nosotros__intro">{{ . }}</p>{{ end }}
+    <ul class="equipo">
+      {{ range $i, $e := .equipo }}
+      <li class="persona">
+        <p class="mono persona__num"><span>0{{ add $i 1 }}</span><span>{{ $e.cargo | default "Socio" }}</span></p>
+        <div class="persona__foto">
+          {{ with $e.foto }}<img src="{{ . | relURL }}" alt="{{ $e.nombre }}" loading="lazy">{{ else }}<span class="persona__vacio"></span>{{ end }}
+        </div>
+        <h3>{{ upper $e.nombre }}</h3>
+        {{ with $e.rol }}<p class="mono persona__rol">{{ . }}</p>{{ end }}
+        {{ with $e.bio }}<p class="persona__bio">{{ . }}</p>{{ end }}
+        {{ with $e.linkedin }}<a class="persona__link mono" href="{{ . }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
 <section id="metodo" class="band band--gris">
   <div class="wrap">
     <h2 class="justify">{{ $p.metodo.titulo | upper | replaceRE " " (printf " %s " $zig) | safeHTML }}</h2>
