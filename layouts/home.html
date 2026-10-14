@@ -29,7 +29,6 @@
     <ul class="equipo">
       {{ range $i, $e := .equipo }}
       <li class="persona">
-        <p class="mono persona__num"><span>0{{ add $i 1 }}</span><span>{{ $e.cargo | default "Socio" }}</span></p>
         <div class="persona__foto">
           {{ with $e.foto }}<img src="{{ . | relURL }}" alt="{{ $e.nombre }}" loading="lazy">{{ else }}<span class="persona__vacio"></span>{{ end }}
         </div>
