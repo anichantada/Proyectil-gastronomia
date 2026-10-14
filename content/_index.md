@@ -9,6 +9,23 @@ bajada: "Somos un estudio de asesores gastronómicos especializado en operacione
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
+nosotros:
+  titulo: "Nosotros"
+  etiqueta: "¿Quiénes somos?"
+  texto: "TEXTO DE PRESENTACIÓN DEL ESTUDIO"
+  equipo:
+    - nombre: "NOMBRE SOCIO 1"
+      cargo: "Socio"
+      rol: "ÁREA"
+      bio: "TRAYECTORIA EN DOS O TRES LÍNEAS"
+    - nombre: "NOMBRE SOCIO 2"
+      cargo: "Socio"
+      rol: "ÁREA"
+      bio: "TRAYECTORIA EN DOS O TRES LÍNEAS"
+    - nombre: "NOMBRE SOCIO 3"
+      cargo: "Socio"
+      rol: "ÁREA"
+      bio: "TRAYECTORIA EN DOS O TRES LÍNEAS"
 metodo:
   titulo: "Nuestro método"
   etiqueta: "¿Cómo trabajamos?"
