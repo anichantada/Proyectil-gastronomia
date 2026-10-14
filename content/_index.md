@@ -15,15 +15,12 @@ nosotros:
   texto: "Somos un estudio de asesores gastronómicos que nace en la cocina del restaurante Freud & Fahler. Tres socios con amplia trayectoria en Buenos Aires y el mundo, y tres miradas que se complementan: operaciones y producto, gestión e innovación, creatividad y experiencia."
   equipo:
     - nombre: "Ana Chantada"
-      cargo: "Socia"
       rol: "Procesos y estandarización"
       bio: "Después de 10 años de experiencia como cocinera en restaurantes de alta cocina, profundizó su carrera como profesional en tecnología de alimentos. Es Magíster en Calidad Industrial (UNSAM-INTI) y Licenciada en Ciencia y Tecnología de Alimentos (UBA) y se desarrolla liderando la estandarización y validación de procesos y metodologías para la industria."
     - nombre: "Facundo Olabarrieta"
-      cargo: "Socio"
       rol: "Gestión de proyectos"
       bio: "Su pasión y curiosidad por la gastronomía lo llevó a la apertura de su propio negocio, Cora Café, luego de desempeñarse en el rubro desde hace más de quince años en los que asumió roles de pastelero, cocinero, investigador y gerente, sumando diplomaturas en Innovación y Desarrollo Gastronómico y en Project Management por la Universidad Blas Pascal."
     - nombre: "Agustin Biondi"
-      cargo: "Socio"
       rol: "Chef creativo"
       bio: "Se formó en restaurants a la vanguardia de la escena local e internacional, como Fäviken (Suecia-dos estrellas Michelin) y Vollmers (Suecia-dos estrellas Michelin). Orientado al estudio de operaciones gastronómicas y al liderazgo y gestión de personas. Se desempeña en el rol de sous chef en la cocina de producción de Anchoita, Buenos Aires."
 metodo:
