@@ -21,11 +21,11 @@ nosotros:
     - nombre: "Facundo Olabarrieta"
       rol: "Concepto y ejecución de proyectos."
       bio: "Con una trayectoria en la que pasó por distintas posiciones en gastronomía (catering, salón, cocina y pastelería) y que complementó con diplomaturas en innovación y desarrollo gastronómico, project management, escritura para medios gastronómicos y la creación de proyectos propios, como Cora Café en el icónico Edificio Kavanagh, tiene un perfil creativo, emprendedor, de liderazgo y gestión de equipos."
-      foto: "img/facu.jpg"
+      foto: "img/facu.jpeg"
     - nombre: "Ana Chantada"
       rol: "Calidad y estandarización de procesos."
       bio: "Después de 10 años de experiencia como cocinera en restaurantes de alta cocina -Freud & Fahler, Oporto, Tegui, Public Restaurant (NYC) e Hisop (BCN)- su búsqueda por obtener la mejor calidad en sus platos la llevó a profundizar su carrera como profesional de los alimentos. Es Magíster en Calidad Industrial (UNSAM-INTI) y Licenciada en Ciencia y Tecnología de Alimentos (UBA) y se desarrolla liderando la estandarización y validación de procesos para la industria."
-      foto: "img/ana.jpeg"
+      foto: "img/ana.jpg"
 metodo:
   titulo: "Nuestro método"
   etiqueta: "¿Cómo trabajamos?"
