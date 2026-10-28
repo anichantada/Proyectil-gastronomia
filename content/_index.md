@@ -56,7 +56,16 @@ servicios:
       texto: "Enfoque en la experiencia del cliente."
     - nombre: "Servicios personalizados"
       texto: "Servicios diseñados a medida para necesidades específicas."
-
+industria:
+  titulo: "Servicios para industrias de alimentos pequeñas y medianas"
+  lista:
+    - nombre: "Rotulado nutricional para alimentos envasados"
+      texto: "Denominación de venta legal según Código Alimentario Argentino, tabla nutricional, listado de ingredientes, advertencias de alérgenos y adecuación a ley de etiquetado frontal."
+    - nombre: "Trazabilidad y registros técnicos"
+      texto: "Orientado a pequeñas industrias o emprendedores artesanales que buscan profesionalizar su operación incorporando un sistema de documentación trazable que refleje su operación."
+    - nombre: "BPM y POES"
+      texto: "Implementación, capacitación y verificación de Buenas Prácticas de Manufactura (BPM) y Procedimientos Operativos Estandarizados de Saneamiento (POES)."
+      
 capacitaciones:
   titulo: "Capacitaciones"
   bajada: "Complementos a nuestros servicios"
