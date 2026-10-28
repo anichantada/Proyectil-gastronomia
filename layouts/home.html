@@ -74,7 +74,23 @@
     </ul>
   </div>
 </section>
-
+{{ with $p.industria }}
+<section id="industria" class="band">
+  <div class="wrap">
+    {{ with .etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
+    <h2 class="justify">{{ upper .titulo }}</h2>
+    {{ with .bajada }}<p class="sub">{{ . }}</p>{{ end }}
+    <ul class="pills">
+      {{ range .lista }}
+      <li class="pill">
+        <h3>{{ upper .nombre }}</h3>
+        {{ with .texto }}<p class="mono">{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
 <section class="band band--oscuro">
   <div class="wrap">
     {{ with $p.capacitaciones.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
