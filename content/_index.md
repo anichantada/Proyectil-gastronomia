@@ -5,14 +5,13 @@
 # ==========================================================
 
 titulo: "Proyectil gastronomía"
-bajada: "Somos un estudio de asesores gastronómicos especializado en operaciones, innovación y calidad"
+bajada: "Somos un estudio de asesores en alimentos y gastronomía especializado en operaciones, innovación y calidad"
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
 nosotros:
   titulo: "Nosotros"
   etiqueta: "¿Quiénes somos?"
-  texto: "Somos un estudio de asesores gastronómicos que nace en la cocina del restaurante Freud & Fahler. Tres socios con amplia trayectoria en Buenos Aires y el mundo, y tres miradas que se complementan: operaciones y producto, gestión e innovación, creatividad y experiencia."
   equipo:
     - nombre: "Agustin Biondi"
       rol: "Chef creativo y gestión estratégica."
@@ -30,7 +29,7 @@ metodo:
   titulo: "Nuestro método"
   etiqueta: "¿Cómo trabajamos?"
   texto: "Creemos en una asesoría cercana, concreta y orientada a resultados. 
-Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicios de asesoría de manera medible, donde el impacto de puede verificarse a través de números. El método se fundamenta en el relevamiento de información clave y el uso de indicadores de desempeño (KPI) cuantitativos diseñados específicamente para evaluar el rendimiento de un proceso, como un servicio de asesoría gastronómica."
+Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicios de asesoría de manera medible, donde el impacto de puede verificarse a través de números. El método se fundamenta en el relevamiento de información clave y el uso de indicadores de desempeño (KPI) cuantitativos diseñados específicamente para evaluar el rendimiento de un proceso, como un servicio de asesoría."
   pasos:
     - nombre: "Relevamiento"
       texto: "Recolectamos la información clave del negocio para establecer un contexto y punto de partida."
@@ -42,7 +41,7 @@ Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicio
       texto: "Verificamos los resultados con auditorías y evaluamos los KPI."
 
 servicios:
-  titulo: "Servicios de asesoría"
+  titulo: "Servicios para negocios gastronómicos"
   etiqueta: "¿Qué ofrecemos?"
   lista:
     - nombre: "Apertura integral"
