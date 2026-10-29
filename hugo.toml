@@ -1,7 +1,7 @@
 baseURL = "https://example.org/"
 locale = "es-AR"
 defaultContentLanguage = "es"
-title = "Proyectil gastronomía"
+title = "BO&C Consultora"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
 [params]
