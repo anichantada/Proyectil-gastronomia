@@ -2,7 +2,7 @@
   <div class="wrap header__inner">
     <a class="brand" href="#inicio" aria-label="{{ site.Title }}">
       {{ partial "logo.html" . }}
-      <span>PROYECTIL</span>
+      <span>{{ upper (index (split site.Title " ") 0) }}</span>
     </a>
     <nav class="nav">
       <a href="#nosotros">Nosotros</a>
