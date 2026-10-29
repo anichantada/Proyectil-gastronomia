@@ -1,5 +1,5 @@
 /* ==========================================================
-   IDENTIDAD PROYECTIL (basada en el Instagram @proyectil.ba)
+   IDENTIDAD BO&C CONSULTORA
    Colores y tipografías se cambian en este bloque.
    ========================================================== */
 :root {
@@ -229,3 +229,66 @@ h2.justify { text-align: left; text-align-last: left; }
 /* Botones solo con ícono */
 .btn--icono { padding: 12px 24px 12px 18px; font-size: 1.35rem; line-height: 1; }
 .btn--icono i { width: auto; }
+
+/* ==========================================================
+   CAMBIOS BO&C (octubre 2026)
+   ========================================================== */
+
+/* Frase del inicio: más chica y sin estirar la última línea */
+.hero__top {
+  text-transform: uppercase;
+  text-align: justify;
+  text-align-last: left;
+  font-size: clamp(1.15rem, 2.5vw, 1.95rem);
+  line-height: 1.25;
+  letter-spacing: .02em;
+  max-width: 1080px;
+}
+@media (max-width: 640px) { .hero__top { text-align: left; } }
+
+/* Equipo: fotos iguales y textos alineados entre los 3 socios */
+@supports (grid-template-rows: subgrid) {
+  .persona {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+    align-content: start;
+  }
+  .persona h3 { align-self: end; }
+}
+.persona__foto { width: calc(100% - 10px); }
+
+/* Pestañas de servicios: misma forma que los botones de la página */
+.tabs {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 48px; padding-bottom: 40px;
+  border-bottom: var(--linea) solid var(--tinta);
+}
+.tab {
+  font-family: var(--mono);
+  font-size: .9rem;
+  cursor: pointer;
+  padding: 14px 40px 14px 20px;
+  background: transparent;
+  color: var(--tinta);
+  border: var(--linea) solid var(--tinta);
+  border-left-width: 4px;
+  border-radius: 0 999px 999px 0;
+  transition: background .15s, color .15s;
+}
+.tab:hover { background: rgba(28,28,26,.08); }
+.tab[aria-selected="true"] { background: var(--tinta); color: var(--blanco); }
+.tab:focus-visible { outline: 2px solid var(--tinta); outline-offset: 3px; }
+.tab-panel[hidden] { display: none; }
+.tab-panel .pills { margin-top: 40px; }
+
+/* Desplegable del formulario */
+.form select {
+  font: inherit; font-size: 1.1rem; color: var(--tinta);
+  background: transparent;
+  border: none; border-bottom: var(--linea) solid var(--tinta);
+  border-radius: 0; padding: 8px 0;
+  cursor: pointer;
+}
+.form select:focus { outline: none; background: rgba(255,255,255,.35); }
