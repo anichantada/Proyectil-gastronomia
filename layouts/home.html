@@ -5,7 +5,7 @@
 
 <section id="inicio" class="hero">
   <div class="wrap">
-    <p class="justify hero__top">{{ $p.bajada }}.{{ with $p.frase }} {{ . }}.{{ end }}</p>
+    <p class="hero__top">{{ $p.bajada }}.{{ with $p.frase }} {{ . }}.{{ end }}</p>
 
     <div class="lockup">
       <div class="lockup__mark"><span class="pmark"></span></div>
@@ -64,33 +64,50 @@
     {{ with $p.servicios.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
     <h2 class="justify">{{ upper $p.servicios.titulo }}</h2>
     {{ with $p.servicios.bajada }}<p class="sub">{{ . }}</p>{{ end }}
-    <ul class="pills">
-      {{ range $p.servicios.lista }}
-      <li class="pill">
-        <h3>{{ upper .nombre }}</h3>
-        {{ with .texto }}<p class="mono">{{ . }}</p>{{ end }}
-      </li>
+
+    <div class="tabs" role="tablist" aria-label="{{ $p.servicios.titulo }}">
+      {{ range $i, $t := $p.servicios.pestanas }}
+      <button type="button" class="tab" role="tab" id="tab-{{ $i }}" aria-controls="panel-{{ $i }}" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}" {{ if ne $i 0 }}tabindex="-1"{{ end }}>{{ $t.nombre }}</button>
       {{ end }}
-    </ul>
+    </div>
+
+    {{ range $i, $t := $p.servicios.pestanas }}
+    <div class="tab-panel" role="tabpanel" id="panel-{{ $i }}" aria-labelledby="tab-{{ $i }}" {{ if ne $i 0 }}hidden{{ end }}>
+      <ul class="pills">
+        {{ range $t.lista }}
+        <li class="pill">
+          <h3>{{ upper .nombre }}</h3>
+          {{ with .texto }}<p class="mono">{{ . }}</p>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <script>
+      (function () {
+        var tabs = Array.prototype.slice.call(document.querySelectorAll("#servicios .tab"));
+        function elegir(tab) {
+          tabs.forEach(function (t) {
+            var activa = t === tab;
+            t.setAttribute("aria-selected", activa ? "true" : "false");
+            t.tabIndex = activa ? 0 : -1;
+            document.getElementById(t.getAttribute("aria-controls")).hidden = !activa;
+          });
+        }
+        tabs.forEach(function (t, i) {
+          t.addEventListener("click", function () { elegir(t); });
+          t.addEventListener("keydown", function (e) {
+            var n = null;
+            if (e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
+            if (e.key === "ArrowLeft") n = tabs[(i - 1 + tabs.length) % tabs.length];
+            if (n) { e.preventDefault(); n.focus(); elegir(n); }
+          });
+        });
+      })();
+    </script>
   </div>
 </section>
-{{ with $p.industria }}
-<section id="industria" class="band">
-  <div class="wrap">
-    {{ with .etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
-    <h2 class="justify">{{ upper .titulo }}</h2>
-    {{ with .bajada }}<p class="sub">{{ . }}</p>{{ end }}
-    <ul class="pills">
-      {{ range .lista }}
-      <li class="pill">
-        <h3>{{ upper .nombre }}</h3>
-        {{ with .texto }}<p class="mono">{{ . }}</p>{{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-</section>
-{{ end }}
 <section class="band band--oscuro">
   <div class="wrap">
     {{ with $p.capacitaciones.etiqueta }}<p class="mono label">{{ . }}</p>{{ end }}
@@ -130,6 +147,15 @@
         <span class="mono">{{ $f.telefono | default "Teléfono" }}</span>
         <input type="tel" name="Teléfono" autocomplete="tel">
       </label>
+      {{ with $f.tipo_opciones }}
+      <label class="form__campo">
+        <span class="mono">{{ $f.tipo | default "Tipo de negocio" }}</span>
+        <select name="Tipo de negocio">
+          <option value="">Elegí una opción</option>
+          {{ range . }}<option>{{ . }}</option>{{ end }}
+        </select>
+      </label>
+      {{ end }}
       <label class="form__campo form__campo--ancho">
         <span class="mono">{{ $f.mensaje | default "Contanos sobre tu proyecto" }}</span>
         <textarea name="Proyecto" rows="5" required></textarea>
@@ -156,7 +182,7 @@
 
     <div class="lockup lockup--small">
       <div class="lockup__mark"><span class="pmark"></span></div>
-      <div class="lockup__text"><span>PROYECTIL</span><span>GASTRONOMÍA</span></div>
+      <div class="lockup__text">{{ range split (upper $p.titulo) " " }}<span>{{ . }}</span>{{ end }}</div>
     </div>
   </div>
 </section>
