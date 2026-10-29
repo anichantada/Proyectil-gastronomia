@@ -4,14 +4,13 @@
 #  Cambiá lo que está entre comillas y guardá.
 # ==========================================================
 
-titulo: "Proyectil gastronomía"
+titulo: "BO&C Consultora"
 bajada: "Somos un estudio de asesores en alimentos y gastronomía especializado en operaciones, innovación y calidad"
 boton: "Contactanos"
 ubicacion: "Bs As, Argentina"
 
 nosotros:
-  titulo: "Nosotros"
-  etiqueta: "¿Quiénes somos?"
+  titulo: "¿Quiénes somos?"
   equipo:
     - nombre: "Agustin Biondi"
       rol: "Chef creativo y gestión estratégica."
@@ -41,31 +40,32 @@ Desarrollamos un método de trabajo que garantiza el efecto de nuestros servicio
       texto: "Verificamos los resultados con auditorías y evaluamos los KPI."
 
 servicios:
-  titulo: "Servicios para negocios gastronómicos"
-  etiqueta: "¿Qué ofrecemos?"
-  lista:
-    - nombre: "Apertura integral"
-      texto: "Acompañamiento completo para abrir tu negocio gastronómico."
-    - nombre: "Ingeniería de menú"
-      texto: "Análisis de coherencia y rentabilidad del menú, recetas estandarizadas y control de costos y mermas."
-    - nombre: "Eficiencia de procesos y buenas prácticas"
-      texto: "Fortalece la operación diaria implementando procedimientos operativos estandarizados (SOPs)."
-    - nombre: "Mejora continua"
-      texto: "Seguimiento y ajustes para sostener la calidad a través del tiempo."
-    - nombre: "Estándares de hospitalidad"
-      texto: "Enfoque en la experiencia del cliente."
-    - nombre: "Servicios personalizados"
-      texto: "Servicios diseñados a medida para necesidades específicas."
-industria:
-  titulo: "Servicios para industrias de alimentos pequeñas y medianas"
-  lista:
-    - nombre: "Rotulado nutricional para alimentos envasados"
-      texto: "Denominación de venta legal según Código Alimentario Argentino, tabla nutricional, listado de ingredientes, advertencias de alérgenos y adecuación a ley de etiquetado frontal."
-    - nombre: "Trazabilidad y registros técnicos"
-      texto: "Orientado a pequeñas industrias o emprendedores artesanales que buscan profesionalizar su operación incorporando un sistema de documentación trazable que refleje su operación."
-    - nombre: "BPM y POES"
-      texto: "Implementación, capacitación y verificación de Buenas Prácticas de Manufactura (BPM) y Procedimientos Operativos Estandarizados de Saneamiento (POES)."
-      
+  titulo: "Servicios de asesoría"
+  # Cada pestaña es un botón; al hacer click se muestran sus servicios.
+  pestanas:
+    - nombre: "Negocios gastronómicos"
+      lista:
+        - nombre: "Apertura integral"
+          texto: "Acompañamiento completo para abrir tu negocio gastronómico."
+        - nombre: "Ingeniería de menú"
+          texto: "Análisis de coherencia y rentabilidad del menú, recetas estandarizadas y control de costos y mermas."
+        - nombre: "Eficiencia de procesos y buenas prácticas"
+          texto: "Fortalece la operación diaria implementando procedimientos operativos estandarizados (SOPs)."
+        - nombre: "Mejora continua"
+          texto: "Seguimiento y ajustes para sostener la calidad a través del tiempo."
+        - nombre: "Estándares de hospitalidad"
+          texto: "Enfoque en la experiencia del cliente."
+        - nombre: "Servicios personalizados"
+          texto: "Servicios diseñados a medida para necesidades específicas."
+    - nombre: "Industria de alimentos"
+      lista:
+        - nombre: "Rotulado nutricional para alimentos envasados"
+          texto: "Denominación de venta legal según Código Alimentario Argentino, tabla nutricional, listado de ingredientes, advertencias de alérgenos y adecuación a ley de etiquetado frontal."
+        - nombre: "Trazabilidad y registros técnicos"
+          texto: "Orientado a pequeñas industrias o emprendedores artesanales que buscan profesionalizar su operación incorporando un sistema de documentación trazable que refleje su operación."
+        - nombre: "BPM y POES"
+          texto: "Implementación, capacitación y verificación de Buenas Prácticas de Manufactura (BPM) y Procedimientos Operativos Estandarizados de Saneamiento (POES)."
+
 capacitaciones:
   titulo: "Capacitaciones"
   bajada: "Complementos a nuestros servicios"
@@ -83,6 +83,10 @@ contacto:
     nombre: "Nombre y apellido"
     email: "Email"
     telefono: "Teléfono (opcional)"
+    tipo: "Tipo de negocio"
+    tipo_opciones:
+      - "Negocio gastronómico"
+      - "Industria de alimentos"
     mensaje: "Contanos sobre tu proyecto"
     boton: "Enviar"
     gracias: "¡Gracias! Te respondemos a la brevedad."
