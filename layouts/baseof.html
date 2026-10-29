@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyectil gastronomía</title>
+  <title>{{ site.Title }}</title>
   <meta name="description" content="{{ site.Params.description }}">
   <meta property="og:title" content="{{ site.Title }}">
   <meta property="og:description" content="{{ site.Params.description }}">
@@ -24,7 +24,7 @@
   </main>
   <footer class="footer">
     <div class="wrap footer__row mono">
-      <span>{{ with site.Params.instagram }}<a href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ else }}© {{ now.Year }} Proyectil{{ end }}</span>
+      <span>{{ with site.Params.instagram }}<a href="https://instagram.com/{{ . }}" target="_blank" rel="noopener">@{{ . }}</a>{{ else }}© {{ now.Year }} {{ site.Title }}{{ end }}</span>
       {{ with site.Params.email }}<span><a href="mailto:{{ . }}">{{ . }}</a></span>{{ end }}
       {{ with site.Home.Params.ubicacion }}<span>{{ . }}</span>{{ end }}    </div>
   </footer>
